@@ -1,17 +1,62 @@
-# React + Vite
+# Soluciones Integrales RQ — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web informacional para **Soluciones Integrales RQ**, empresa costarricense especializada en la venta de materiales eléctricos y supresores de voltaje marca **Citel**.
 
-Currently, two official plugins are available:
+## 🖥️ Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 [Ver sitio en vivo](https://soluciones-integrales-rq.vercel.app)
 
-## React Compiler
+## 📌 Descripción
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Página de presentación profesional diseñada para generar confianza en el cliente y dirigirlo a contactar el negocio vía WhatsApp. No es un e-commerce — el objetivo es informar y convertir visitas en consultas directas.
 
-## Expanding the ESLint configuration
+## ✨ Secciones
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Soluciones-Integrales-RQ
+- **Hero** — Presentación del negocio con llamada a la acción
+- **Productos** — Catálogo de categorías: Supresores Citel, Materiales Eléctricos, Suministros y Protección
+- **¿Por qué elegirnos?** — Ventajas competitivas del negocio
+- **Contacto** — Botón de WhatsApp y datos de contacto
+- **Botón flotante** — Acceso rápido a WhatsApp desde cualquier sección
+
+## 🛠️ Tecnologías
+
+- [React](https://react.dev/) + [Vite](https://vite.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- Diseño mobile-first y responsive
+- Animaciones con IntersectionObserver + CSS
+
+## 🚀 Correr localmente
+
+```bash
+npm install
+npm run dev
+```
+
+## 📁 Estructura
+
+```
+src/
+├── App.jsx                  # Config principal (número de WhatsApp aquí)
+├── index.css                # Estilos globales + animaciones
+└── components/
+    ├── Navbar.jsx
+    ├── Hero.jsx
+    ├── Products.jsx
+    ├── WhyUs.jsx
+    ├── Contact.jsx
+    ├── Footer.jsx
+    ├── FloatingWhatsApp.jsx
+    └── Logo.jsx
+```
+
+## ⚙️ Configuración
+
+Para cambiar el número de WhatsApp, editar `src/App.jsx`:
+
+```js
+export const WA_NUMBER = '50660457842' // formato: 506 + número
+```
+
+## 👤 Autor
+
+**Elias** — [@Elias1409](https://github.com/Elias1409)
