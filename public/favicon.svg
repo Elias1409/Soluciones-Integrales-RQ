@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-  <path d="M20 2 L35.56 11 L35.56 29 L20 38 L4.44 29 L4.44 11 Z" fill="url(#g)"/>
-  <path d="M22.5 8 L14 21.5 L20.5 21.5 L17.5 32 L26 18.5 L19.5 18.5 Z" fill="white"/>
-  <defs>
-    <linearGradient id="g" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1d4ed8"/>
-      <stop offset="100%" stop-color="#2563eb"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Circle ring with gaps -->
+  <path d="M 47,47 A 75,75 0 0,1 173,116" stroke="#29ABE2" stroke-width="16" stroke-linecap="round"/>
+  <path d="M 151,155 A 75,75 0 0,1 28,81" stroke="#29ABE2" stroke-width="16" stroke-linecap="round"/>
+  <!-- Lightning bolt -->
+  <polygon points="35,18 106,48 105,92 148,102 165,182 88,148 89,104 46,94" fill="#F47421"/>
+  <!-- RQ -->
+  <text x="100" y="117" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="50" fill="#1D3461">RQ</text>
 </svg>
