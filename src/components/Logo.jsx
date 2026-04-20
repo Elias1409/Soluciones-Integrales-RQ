@@ -1,35 +1,50 @@
+const NAVY = '#1a3272'
+const ORANGE = '#f5a623'
+
+function LogoSVG({ className }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 100 106"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Soluciones Integrales RQ logo"
+    >
+      {/* Circle ring */}
+      <circle cx="50" cy="50" r="43" stroke={NAVY} strokeWidth="4.5" fill="none" />
+
+      {/* Lightning bolt — upper arm (top-right → center) */}
+      <polygon points="57,11 71,11 50,51 35,51" fill={NAVY} />
+
+      {/* Lightning bolt — lower arm (center → bottom-left) */}
+      <polygon points="50,49 65,49 43,91 27,91" fill={NAVY} />
+
+      {/* Plug body */}
+      <rect x="26" y="90" width="18" height="8" rx="2.5" fill={NAVY} />
+
+      {/* Plug prongs */}
+      <rect x="30"  y="97" width="4" height="7" rx="1.5" fill={NAVY} />
+      <rect x="38"  y="97" width="4" height="7" rx="1.5" fill={NAVY} />
+
+      {/* R letter */}
+      <text
+        x="54"
+        y="68"
+        fontFamily="'Arial Black', Arial, sans-serif"
+        fontWeight="900"
+        fontSize="47"
+        fill={ORANGE}
+      >
+        R
+      </text>
+    </svg>
+  )
+}
+
 export default function Logo({ className = 'w-10 h-10', textClass = '' }) {
   return (
     <div className={`flex items-center gap-2.5 ${textClass}`}>
-      <svg
-        className={className}
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-label="Soluciones Integrales RQ logo"
-      >
-        <path
-          d="M20 2 L35.56 11 L35.56 29 L20 38 L4.44 29 L4.44 11 Z"
-          fill="url(#hex-gradient)"
-        />
-        <path
-          d="M20 6 L32.5 13 L32.5 27 L20 34 L7.5 27 L7.5 13 Z"
-          fill="none"
-          stroke="rgba(255,255,255,0.15)"
-          strokeWidth="1"
-        />
-        <path
-          d="M22.5 8 L14 21.5 L20.5 21.5 L17.5 32 L26 18.5 L19.5 18.5 Z"
-          fill="white"
-        />
-        <defs>
-          <linearGradient id="hex-gradient" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#1d4ed8" />
-            <stop offset="100%" stopColor="#2563eb" />
-          </linearGradient>
-        </defs>
-      </svg>
-
+      <LogoSVG className={className} />
       <div className="leading-tight">
         <span className="block font-extrabold text-base tracking-tight">Soluciones RQ</span>
         <span className="block text-[10px] font-medium tracking-widest uppercase opacity-70">Integrales</span>
@@ -39,33 +54,5 @@ export default function Logo({ className = 'w-10 h-10', textClass = '' }) {
 }
 
 export function LogoIcon({ className = 'w-8 h-8' }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M20 2 L35.56 11 L35.56 29 L20 38 L4.44 29 L4.44 11 Z"
-        fill="url(#hex-g2)"
-      />
-      <path
-        d="M20 6 L32.5 13 L32.5 27 L20 34 L7.5 27 L7.5 13 Z"
-        fill="none"
-        stroke="rgba(255,255,255,0.15)"
-        strokeWidth="1"
-      />
-      <path
-        d="M22.5 8 L14 21.5 L20.5 21.5 L17.5 32 L26 18.5 L19.5 18.5 Z"
-        fill="white"
-      />
-      <defs>
-        <linearGradient id="hex-g2" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#1d4ed8" />
-          <stop offset="100%" stopColor="#2563eb" />
-        </linearGradient>
-      </defs>
-    </svg>
-  )
+  return <LogoSVG className={className} />
 }
