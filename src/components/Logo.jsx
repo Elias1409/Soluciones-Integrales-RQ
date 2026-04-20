@@ -1,42 +1,41 @@
-const NAVY = '#1a3272'
-const ORANGE = '#f5a623'
+const BLUE   = '#29ABE2'
+const NAVY   = '#1D3461'
+const ORANGE = '#F47421'
 
 function LogoSVG({ className }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 100 106"
+      viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Soluciones Integrales RQ logo"
     >
-      {/* Circle ring */}
-      <circle cx="50" cy="50" r="43" stroke={NAVY} strokeWidth="4.5" fill="none" />
+      {/* Circle ring — two arcs with gaps where the bolt pierces */}
+      <path
+        d="M 47,47 A 75,75 0 0,1 173,116"
+        stroke={BLUE} strokeWidth="16" strokeLinecap="round"
+      />
+      <path
+        d="M 151,155 A 75,75 0 0,1 28,81"
+        stroke={BLUE} strokeWidth="16" strokeLinecap="round"
+      />
 
-      {/* Lightning bolt — upper arm (top-right → center) */}
-      <polygon points="57,11 71,11 50,51 35,51" fill={NAVY} />
+      {/* Lightning bolt — double-headed arrow, upper-left → lower-right */}
+      <polygon
+        points="35,18 106,48 105,92 148,102 165,182 88,148 89,104 46,94"
+        fill={ORANGE}
+      />
 
-      {/* Lightning bolt — lower arm (center → bottom-left) */}
-      <polygon points="50,49 65,49 43,91 27,91" fill={NAVY} />
-
-      {/* Plug body */}
-      <rect x="26" y="90" width="18" height="8" rx="2.5" fill={NAVY} />
-
-      {/* Plug prongs */}
-      <rect x="30"  y="97" width="4" height="7" rx="1.5" fill={NAVY} />
-      <rect x="38"  y="97" width="4" height="7" rx="1.5" fill={NAVY} />
-
-      {/* R letter */}
+      {/* RQ */}
       <text
-        x="54"
-        y="68"
+        x="100" y="117"
+        textAnchor="middle"
         fontFamily="'Arial Black', Arial, sans-serif"
         fontWeight="900"
-        fontSize="47"
-        fill={ORANGE}
-      >
-        R
-      </text>
+        fontSize="50"
+        fill={NAVY}
+      >RQ</text>
     </svg>
   )
 }
