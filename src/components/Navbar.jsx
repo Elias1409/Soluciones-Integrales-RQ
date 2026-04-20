@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { waLink } from '../App'
 import Logo from './Logo'
 
@@ -10,24 +10,14 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100' : ''}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <a href="#inicio">
-            <Logo
-              className="w-8 h-8"
-              textClass={`transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}
-            />
+            <Logo className="w-8 h-8" textClass="text-gray-900" />
           </a>
 
           {/* Desktop */}
@@ -36,7 +26,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`text-sm transition-colors ${scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/70 hover:text-white'}`}
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {l.label}
               </a>
@@ -54,7 +44,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className={`md:hidden p-2 ${scrolled ? 'text-gray-700' : 'text-white'}`}
+            className="md:hidden p-2 text-gray-700"
             aria-label="Menú"
           >
             {open
